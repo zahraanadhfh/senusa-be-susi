@@ -6,3 +6,5 @@ wkhtmltopdf
 SQLAlchemy
 pdfplumber
 flask_sqlalchemy
+gunicorn
+pycrypto
