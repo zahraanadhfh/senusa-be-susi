@@ -1,0 +1,8 @@
+Flask
+camelot-py[cv]
+PyPDF2
+flask_mysqldb
+wkhtmltopdf
+SQLAlchemy
+pdfplumber
+flask_sqlalchemy

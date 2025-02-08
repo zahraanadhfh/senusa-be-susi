@@ -1,0 +1,89 @@
+<!-- templates/classification_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-image: url('https://geneonline.news/wp-content/uploads/2017/12/30323619_xxl-e1513046251832.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-weight: 600;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 18px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Results</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Variant</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in classified_variants %}
+                <tr>
+                    <td>{{ result['Variant'] }}</td>
+                    <td>{{ result['Classification'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/"><button>Back to Upload</button></a>
+    </div>
+</body>
+</html>

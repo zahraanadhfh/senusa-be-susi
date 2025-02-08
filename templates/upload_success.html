@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploaded Successfully</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>File Uploaded Successfully</h1>
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2>Deskripsi Paper</h2>
+                <div class="table-responsive">
+                    {{ description|safe }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2>Tabel Hasil Pemrosesan</h2>
+                <div class="table-responsive">
+                    {{ tables|safe }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol untuk mengunduh PDF -->
+        <div class="mt-4">
+            <a href="{{ url_for('main.download_pdf', filename='output_file.pdf') }}" class="btn btn-primary">Download PDF</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

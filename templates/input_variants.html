@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Variants</title>
+</head>
+<body>
+    <h1>Input Variants</h1>
+    
+    <!-- Menampilkan flash message jika ada -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Form untuk input varian -->
+    <form method="post">
+        <label for="variants">Enter Variants (comma separated):</label>
+        <input type="text" name="variants" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
